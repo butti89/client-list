@@ -1,0 +1,62 @@
+<ion-view view-title="{{client.name}}">
+
+  <ion-nav-buttons side="right">
+    <button class="button button-icon icon ion-android-star" data-ng-if="clientDetails.favorite">
+    </button>
+  </ion-nav-buttons>
+
+  <ion-content id="detailsContent" class="has-header padding">
+
+    <div class="clientMainDetails">
+      <img src="{{client.smallImageURL}}" width="100" height="100" style="float: left; margin-right: 10px;"/>
+      <div>
+        <h6 class="gray">Name:</h6>
+        <h5>{{client.name}}</h5>
+        <h6 class="gray">Company:</h6>
+        <h5>{{client.company}}</h5>
+      </div>
+    </div>
+
+    <h6 class="gray">Phone:</h6>
+    <div>
+      <div ng-show="client.phone.home != ''">
+        <h5 class="phoneNumber">{{client.phone.home}}</h5> <h6 class="phoneType">Home</h6>
+      </div>
+      <div ng-show="client.phone.work != ''">
+        <h5 class="phoneNumber">{{client.phone.work}}</h5> <h6 class="phoneType">Work</h6>
+      </div>
+      <div ng-show="client.phone.mobile != '' && client.phone.mobile != undefined">
+        <h5 class="phoneNumber">{{client.phone.mobile}}</h5> <h6 class="phoneType">Mobile</h6>
+      </div>
+    </div>
+
+    <h6 class="gray">Address:</h6>
+    <div style="margin-bottom: 10px;" class="row">
+      <div class="col col-75">
+        <h5 style="margin-bottom: 0px">{{clientDetails.address.street}}, {{clientDetails.address.city}}, {{clientDetails.address.state}},
+          {{clientDetails.address.country}}, {{clientDetails.address.zip}}</h5>
+      </div>
+      <div style="position: relative;" class="col">
+        <a style="right: 0px;" ng-click="goToLocation()" class="button button-icon icon ion-ios-location vertical-centered"></a>
+      </div>
+    </div>
+
+    <h6 class="gray">Birthday:</h6>
+    <h5>{{clientBirthdate}}</h5>
+
+    <h6 class="gray">E-mail:</h6>
+    <h5>{{clientDetails.email}}</h5>
+
+    <h6 class="gray">Website:</h6>
+    <button class="button button-assertive button-small" ng-click="openURL(clientDetails.website)"> {{clientDetails.website}}</button>
+
+    <!--<div class="list card">-->
+      <!--<a class="item item-icon-left" href="#/employee/{{employee.managerId}}" ng-if="employee.managerId > 0"><i class="icon ion-ios7-person"></i>View Manager<p>{{employee.managerName}}</p></a>-->
+      <!--<a class="item item-icon-left" href="#/employee/{{employee.id}}/reports" ng-if="employee.reports > 0"><i class="icon ion-person-stalker"></i>View Direct Reports<p>{{employee.reports}}</p></a>-->
+      <!--<a class="item item-icon-left" href="tel:{{employee.officePhone}}"><i class="icon ion-ios7-telephone"></i>Call Office<p>{{employee.officePhone}}</p></a>-->
+      <!--<a class="item item-icon-left" href="tel:{{employee.cellPhone}}"><i class="icon ion-ios7-telephone"></i>Call Cell<p>{{employee.cellPhone}}</p></a>-->
+      <!--<a class="item item-icon-left" href="sms:{{employee.cellPhone}}"><i class="icon ion-chatbox-working"></i>SMS<p>{{employee.cellPhone}}</p></a>-->
+      <!--<a class="item item-icon-left" href="mailto:{{employee.email}}"><i class="icon ion-ios7-email"></i>Email<p>{{employee.email}}</p></a>-->
+    <!--</div>-->
+  </ion-content>
+</ion-view>

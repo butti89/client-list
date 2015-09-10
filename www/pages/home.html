@@ -1,0 +1,18 @@
+<ion-view view-title="Solstice Client List">
+  <ion-content class="has-header">
+
+    <div class="list">
+      <a ng-repeat="client in clients" ng-click="goToDetails(client)" class="item item-thumbnail-left">
+        <img src="{{client.smallImageURL}}">
+        <div class="clientData">
+          <div class="vertical-centered">
+            <h2 class="clientName">{{client.name}}</h2>
+            <p>{{client.phone.mobile}}</p>
+            <p ng-if="client.phone.mobile == '' || client.phone.mobile == undefined">{{client.phone.home}}</p>
+          </div>
+        </div>
+      </a>
+    </div>
+
+  </ion-content>
+</ion-view>

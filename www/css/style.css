@@ -1,0 +1,65 @@
+.phoneType{
+  float: right;
+  display:inline-block;
+}
+
+.phoneNumber{
+  display:inline-block;
+}
+
+.back-text{
+  display:none !important;
+}
+
+.clientMainDetails{
+  margin-bottom: 25px;
+}
+
+#detailsContent h5{
+  margin-top: 0px !important;
+}
+#detailsContent h6{
+  margin-top: 0px !important;
+}
+
+.row,.col{
+  padding:0;
+}
+
+.vertical-centered{
+  position: absolute; top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.gray{
+  color:gray;
+}
+
+.clientData{
+  height: 75px;
+}
+
+#location-content .angular-google-map-container {
+  height: 100%;
+}
+
+#location-content .angular-google-map {
+  height: 100%;
+}
+
+#location-content .scroll {
+  height: 100%;
+}
+
+.right-header-icon{
+  position: absolute;
+  right: 0px;
+  top: 0.4em;
+}
+
+.clientName{
+  margin-bottom: 5px !important;
+}
+
