@@ -28,10 +28,6 @@ angular.module('SolsticeClientList', ['ionic', 'controllersModule','factoriesMod
                   return response.data;
                 },
                 function(data) {
-                  //var alertPopup = $ionicPopup.alert({
-                  //  title: 'Error',
-                  //  template: 'You might have lost internet connection. Try again later!'
-                  //});
                 });
             }
           ]
@@ -54,10 +50,6 @@ angular.module('SolsticeClientList', ['ionic', 'controllersModule','factoriesMod
                   return response.data;
                 },
                 function(data) {
-                  //var alertPopup = $ionicPopup.alert({
-                  //  title: 'Error',
-                  //  template: 'You might have lost internet connection. Try again later!'
-                  //});
                 });
             }
           ]
