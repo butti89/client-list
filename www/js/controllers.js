@@ -73,18 +73,3 @@ angular.module('controllersModule', [])
   };
 
 });
-
-//.controller('loginCtrl', function($scope,$state, $stateParams) {
-//
-//      // Form data for the login modal
-//      $scope.loginData = {};
-//
-//    $scope.navToHome = function(){
-//      $state.go('app.home');
-//    }
-//
-//})
-//.controller('wifiConfigCtrl', function($scope, $stateParams) {
-//})
-//.controller('configuracionCtrl', function($scope, $stateParams) {
-//});
